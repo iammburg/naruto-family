@@ -54,21 +54,21 @@ export default function NavBar() {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal text-black px-1">
                     <li>
-                        <a>About Naruto</a>
+                        <a className="rounded-3xl">About Naruto</a>
                     </li>
                     <li>
-                        <a>Friendship</a>
+                        <a className="rounded-3xl"c>Friendship</a>
                     </li>
                     <li>
-                        <a>Love</a>
+                        <a className="rounded-3xl"c>Love</a>
                     </li>
                     <li>
-                        <a>Hard Work</a>
+                        <a className="rounded-3xl"c>Hard Work</a>
                     </li>
                 </ul>
             </div>
             <div className="navbar-end">
-                <button className="btn btn-ghost">
+                <button className="btn rounded-3xl">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"

@@ -3,7 +3,11 @@ const plugin = require("tailwindcss/plugin");
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
-    content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+    content: [
+        "./index.html",
+        "./src/**/*.{js,ts,jsx,tsx}",
+        "node_modules/flowbite-react/lib/esm/**/*.js",
+    ],
     theme: {
         extend: {
             textShadow: {
@@ -17,6 +21,11 @@ module.exports = {
             fontFamily: {
                 sansJP: [
                     "Noto Serif JP",
+                    "serif",
+                    ...defaultTheme.fontFamily.serif,
+                ],
+                montserrat: [
+                    "Montserrat",
                     "sans-serif",
                     ...defaultTheme.fontFamily.sans,
                 ],
@@ -38,5 +47,6 @@ module.exports = {
 
             addUtilities(newUtilities, ["responsive", "hover"]);
         }),
+        require("flowbite/plugin"),
     ],
 };
